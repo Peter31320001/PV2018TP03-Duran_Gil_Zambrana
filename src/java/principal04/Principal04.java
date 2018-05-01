@@ -6,6 +6,7 @@
 package principal04;
 
 import controlador.RectanguloBean;
+import java.util.Scanner;
 
 /**
  *
@@ -17,10 +18,16 @@ public class Principal04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner r = new Scanner(System.in);
         RectanguloBean unBean = new RectanguloBean();
         unBean.llenarListado();
         unBean.visualizarListado();
-        unBean.eliminarRectanguloDeListado(2);
+        System.out.println("Elija que rectangulo sacar: ");
+        System.out.println("0.- Primer rectangulo");
+        System.out.println("1.- Segundo rectangulo");
+        System.out.println("2.- Tercero rectangulo");
+        int i = r.nextInt();
+        unBean.eliminarRectanguloDeListado(i);
         System.out.println("");
         unBean.visualizarListado();
     }
