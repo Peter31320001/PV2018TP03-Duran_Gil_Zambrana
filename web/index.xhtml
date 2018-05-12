@@ -2,8 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-    <h:head>
+          
+      xmlns:p="http://primefaces.org/ui" >
+      <h:head>
         <title>Punto 6</title>
     </h:head>
     <h:body>
@@ -20,7 +21,7 @@
                     <p:inputNumber id="txtPrecio" value="#{librosFormBeans.precio}"/>
                     <p:outputLabel/>
                     <p:commandButton id="btnGuardarLibro" value="Guardar Libro"
-                                     update="tblLibro"
+                                     update="tblMuestraLibros"
                                      actionListener="#{librosFormBeans.guardarLibro()}"/>
                 </p:panelGrid>
                 <h:panelGrid id="tblMuestraLibros" columns="4">
